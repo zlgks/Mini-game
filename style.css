@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./carrot/img/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+.ui {
+  text-align: center;
+}
+
+.ui__game-button {
+  width: 70px;
+  height: 70px;
+  border: salmon 5px solid;
+  border-radius: 10px;
+  background-color: white;
+  font-size: 25pt;
+  color: salmon;
+  cursor: pointer;
+  margin: 8px;
+  line-height: 25pt;
+}
+
+.ui__game-button:hover {
+  transform: scale(1.1);
+}
+
+.ui__timer-box {
+  width: 250px;
+  height: 70px;
+  background-color: white;
+  margin: auto;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  border: salmon 5px solid;
+  text-align: center;
+}
+
+.ui__timer {
+  height: 100%;
+  font-size: 30pt;
+  color: black;
+  font-weight: 800;
+  letter-spacing: 8px;
+  text-align: center;
+  line-height: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.ui__carrot-box {
+  border: salmon 3px solid;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.ui__carrot-counter {
+  font-weight: 800;
+  font-size: 30pt;
+  line-height: 80px;
+}
+
+.ui__lose,
+.ui__win,
+.ui__reset {
+  z-index: 10;
+  width: 500px;
+  height: 300px;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.ui__lose.active,
+.ui__win.active,
+.ui__reset.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ui__lose div,
+.ui__win div,
+.ui__reset div {
+  font-size: 40pt;
+  color: white;
+}
+
+.ui__reset-button {
+  font-size: 60pt;
+  color: white;
+  cursor: pointer;
+}
+
+.ui__reset-button:hover {
+  transform: scale(1.1);
+  color: salmon;
+  cursor: pointer;
+}
+
+.game-section {
+  background-color: transparent;
+  position: relative;
+  margin-top: 150px;
+  width: 100%;
+  height: 380px;
+}
+
+.game-bug,
+.game-carrot {
+  position: absolute;
+  display: inline-block;
+  opacity: 0;
+}
+
+.game-bug {
+  width: 50px;
+  height: 50px;
+  background: url(./carrot/img/bug.png) no-repeat;
+  transform: ;
+}
+
+.game-carrot {
+  z-index: 1;
+  width: 80px;
+  height: 80px;
+  background: url(./carrot/img/carrot.png) no-repeat;
+}
+
+.game-bug.active,
+.game-carrot.active {
+  opacity: 1;
+}
+
+.game-bug.active:hover,
+.game-carrot.active:hover {
+  transform: scale(1.1);
+}
