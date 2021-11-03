@@ -122,18 +122,16 @@ button {
   height: 380px;
 }
 
-.game-bug,
-.game-carrot {
+.game-bug[data-state="already"],
+.game-carrot[data-state="already"] {
   position: absolute;
-  display: inline-block;
-  opacity: 0;
+  display: none;
 }
 
 .game-bug {
   width: 50px;
   height: 50px;
   background: url(./carrot/img/bug.png) no-repeat;
-  transform: ;
 }
 
 .game-carrot {
@@ -143,12 +141,13 @@ button {
   background: url(./carrot/img/carrot.png) no-repeat;
 }
 
-.game-bug.active,
-.game-carrot.active {
-  opacity: 1;
+.game-bug[data-state="ready"],
+.game-carrot[data-state="ready"] {
+  position: absolute;
+  display: inline-block;
 }
 
-.game-bug.active:hover,
-.game-carrot.active:hover {
+.game-bug[data-state="ready"]:hover,
+.game-carrot[data-state="ready"]:hover {
   transform: scale(1.1);
 }

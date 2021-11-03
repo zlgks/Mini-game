@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <script src="./main.js" defer></script>
+    <script src="./javascript.js" defer></script>
     <script src="https://kit.fontawesome.com/6c75790684.js" crossorigin="anonymous"></script>
     <title>Carrot Game🥕</title>
 </head>
 <body>
     <section class="ui">
-        <button class="ui__game-button" data-type="game">
-            <i class="fas fa-play" data-type="game"></i>
+        <button class="ui__game-button" data-state="game">
+            <i class="fas fa-play" data-state="game"></i>
         </button>
         <div class="ui__timer-box">
             <div class="ui__timer">
@@ -25,46 +25,48 @@
         </div>
         <div class="ui__lose">
             <div>Game over!😭</div>
-            <button class="ui__reset-button">
-                <i class="fas fa-undo"></i>
+            <button class="ui__reset-button" data-state="reset">
+                <i class="fas fa-undo" data-state="reset"></i>
             </button>
         </div>
         <div class="ui__win">
             <div>you Win!😘</div>
-            <button class="ui__reset-button">
-                <i class="fas fa-undo"></i>
+            <button class="ui__reset-button" data-state="reset">
+                <i class="fas fa-undo" data-state="reset"></i>
             </button>
         </div>
         <div class="ui__reset">
             <div>Do you want reset?🥕</div>
-            <button class="ui__reset-button">
-                <i class="fas fa-undo"></i>
+            <button class="ui__reset-button" data-state="reset">
+                <i class="fas fa-undo" data-state="reset"></i>
             </button>
         </div>
     </section>
     <section class="game-section">
         <div class="game-target">         
-            <span class="game-bug"></span>
-            <span class="game-bug"></span>
-            <span class="game-bug"></span>
-            <span class="game-bug"></span>
-            <span class="game-bug"></span>
-            <span class="game-bug"></span>
-            <span class="game-bug"></span>
-            <span class="game-bug"></span>
-            <span class="game-bug"></span>
-            <span class="game-bug"></span>
-            <span class="game-carrot"></span>
-            <span class="game-carrot"></span>
-            <span class="game-carrot"></span>
-            <span class="game-carrot"></span>
-            <span class="game-carrot"></span>
-            <span class="game-carrot"></span>
-            <span class="game-carrot"></span>
-            <span class="game-carrot"></span>
-            <span class="game-carrot"></span>
-            <span class="game-carrot"></span>
+            <span class="game-bug" data-state="already"></span>
+            <span class="game-bug" data-state="already"></span>
+            <span class="game-bug" data-state="already"></span>
+            <span class="game-bug" data-state="already"></span>
+            <span class="game-bug" data-state="already"></span>
+            <span class="game-bug" data-state="already"></span>
+            <span class="game-bug" data-state="already"></span>
+            <span class="game-bug" data-state="already"></span>
+            <span class="game-bug" data-state="already"></span>
+            <span class="game-bug" data-state="already"></span>
+            <span class="game-carrot" data-state="already"></span>
+            <span class="game-carrot" data-state="already"></span>
+            <span class="game-carrot" data-state="already"></span>
+            <span class="game-carrot" data-state="already"></span>
+            <span class="game-carrot" data-state="already"></span>
+            <span class="game-carrot" data-state="already"></span>
+            <span class="game-carrot" data-state="already"></span>
+            <span class="game-carrot" data-state="already"></span>
+            <span class="game-carrot" data-state="already"></span>
+            <span class="game-carrot" data-state="already"></span>
         </div>
     </section>
+    <div class="sounds">
+        <audio></audio>
+    </div>
 </body>
-</html>
