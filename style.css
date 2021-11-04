@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-body {
+.game-view {
   background-image: url(./carrot/img/background.png);
   background-repeat: no-repeat;
   background-size: cover;
