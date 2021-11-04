@@ -57,8 +57,9 @@ target.addEventListener('click', (event) => {
     if(winPopup.className === 'ui__win active' ||
     losePopup.className === 'ui__lose active') {
         return;
+    } else {
+        clickTarget(event);
     }
-    clickTarget(event);
 })
 
 //---------------------------함수--------------------------------
