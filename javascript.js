@@ -54,6 +54,10 @@ ui.addEventListener('click', (event) => {
 
 //타겟 클릭 이벤트
 target.addEventListener('click', (event) => {
+    if(winPopup.className === 'ui__win active' ||
+    losePopup.className === 'ui__lose active') {
+        return;
+    }
     clickTarget(event);
 })
 
@@ -204,12 +208,15 @@ function clickTarget(event) {
 function remainCarrotCount() {
     let carrot = document.querySelectorAll('.game-carrot');
     carrotCount.innerText = carrot.length;
-    if(carrot.length < 1) {
+
+    if(winPopup.className === 'ui__win active'){
+        return;
+    } else if(carrot.length < 1) {
         soundControl(bgSound, 'stop');
         soundControl(gameWinSound,'play');
         winPopup.classList.add('active');
         clearInterval(timer);
-    }
+    } 
 }
 
 //소리 컨트롤
